@@ -48,4 +48,4 @@
 
 **ПРОГРАММА:**
 
-[Program.cs]https://github.com/VeraNic/ControlWork_I/blob/main/Program.cs
+Program.cs https://github.com/VeraNic/ControlWork_I/blob/main/Program.cs
