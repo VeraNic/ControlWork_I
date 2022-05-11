@@ -48,7 +48,9 @@
 
 **Program.cs** https://github.com/VeraNic/ControlWork_I/blob/main/Program.cs
 
-**Пример вывода на экран:**
+**Примеры вывода:**
 
-![Скриншот работы программы](Screenshot.jpg)
+![Скриншот 1 работы программы](Screenshot1.jpg)
+
+![Скриншот 2 работы программы](Screenshot2.jpg)
 
