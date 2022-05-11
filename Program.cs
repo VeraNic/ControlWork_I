@@ -1,4 +1,4 @@
-﻿// Контрольная работа
+// Контрольная работа
 // Выполнила Фролова Вера, гр. 2123 Разработчик
 //
 // Задача: Написать программу, которая 
@@ -21,7 +21,7 @@
 
 textTask();
 string[] arrayInput = GetArrayStringRandom(); //создание массива строк arrayInput
-// string[] arrayInput = {"hallo”, "2”, "world”}; // - примеры для тестирования программы БЕЗ метода GetArrayStringRandom()
+//string[] arrayInput = {"hallo", "2", "world"}; // - примеры для тестирования программы БЕЗ метода GetArrayStringRandom()
 // string[] arrayInput = {"1234", "1567", "-2", "computer_science"};
 // string[] arrayInput = {"Russia", "Denmark", "Kazan"};
 int len = arrayInput.Length; //длина имеющегося массива
@@ -29,26 +29,30 @@ int quantity = 0; //количество элементов нового мас�
 quantity = lengthArrayOutput(arrayInput); //подсчет элементов, удовлетворяющих условию
 string[] arrayOutput = new string[quantity]; //задание нового массива
 arrayOutput = FillArray(arrayInput, arrayOutput); //заполнение нового массива
-Console.WriteLine("Имеющийся массив строк:\n");
+Console.Write($"Имеющийся массив из {arrayInput.Length} строк");
+if (arrayInput.Length % 10 == 1 && arrayInput.Length != 11) Console.Write("и");
+Console.WriteLine(":\n");
 PrintArray(arrayInput);
 if (arrayOutput.Length != 0) //ПРОВЕРКА, сформирован ли итоговый массив
     {
-        Console.WriteLine("Сформированный массив строк:\n"); //вывод полученного массива
+        Console.Write($"Сформирован массив из {arrayOutput.Length} строк");
+        if (arrayOutput.Length % 10 == 1 && arrayOutput.Length != 11) Console.Write("и");
+        Console.Write(" c длиной, меньшей либо равной 3:\n"); //вывод полученного массива
         PrintArray(arrayOutput);
     }
-else Console.WriteLine("[] \n\nСтрок, длина которых меньше либо равна 3, нет. \nНовый массив не сформирован."); //вывод сообщения о несформированности массива
+else Console.WriteLine("[] \n\nСтрок, длина которых меньше либо равна 3, нет. "); //вывод сообщения о несформированности массива
 Console.WriteLine("\n"); Console.ReadKey();
 
 string[] GetArrayStringRandom() //МЕТОД СОЗДАНИЯ МАССИВА СЛУЧАЙНОГО КОЛИЧЕСТВА СТРОК СЛУЧАЙНОЙ ДЛИНЫ ИЗ СЛУЧАЙНЫХ СИМВОЛОВ
 {
     Random random = new Random();
-    int lengthArray = random.Next(2, 21); 
+    int lengthArray = random.Next(1, 101); 
     string[] array = new string[lengthArray];
     for (int i = 0; i < lengthArray; i++)
     {
-        string symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'()*+,-./:;<=>?@[]^_'{|}~";
+        string symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'()*+,-\"./:;<=>?@[]^_'{|}~";
         
-        int lengthString = random.Next(1, 11);
+        int lengthString = random.Next(1, 21);
         for (int j = 0; j < lengthString; j++)
         {
             int numberSymbol = random.Next(0, symbols.Length -1);
