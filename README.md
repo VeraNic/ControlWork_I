@@ -47,3 +47,8 @@
 ## ПРОГРАММА:
 
 **Program.cs** https://github.com/VeraNic/ControlWork_I/blob/main/Program.cs
+
+**Пример вывода на экран:**
+
+![Скриншот работы программы](Screenshot.jpg)
+
