@@ -43,3 +43,9 @@
 **БЛОК-СХЕМА:**
 
 ![Блок-схема](flowchart.jpg)
+
+..............................................................
+
+**ПРОГРАММА:**
+
+[Program.cs]https://github.com/VeraNic/ControlWork_I/blob/main/Program.cs
